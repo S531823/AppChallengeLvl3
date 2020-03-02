@@ -1,25 +1,17 @@
----
-layout: default
-title: Home
----
-
-
-<h1>Recent Articles</h1>
-<div class="container">
-
-  <div class="blog-posts">
-    {% for post in site.posts  limit: 7 %}
-      <div class="blog-post spacing">
-        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-        <p class="summary">
-          {{ post.category }}
-          <span class="date">
-            {{ post.date | date: '%B %d, %Y' }}
-          </span>
-        </p>
-        {{ post.excerpt }} 
-      </div>
-      <hr>
-    {% endfor %}
-  </div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <div>
+            Input 1: <input type="text" id="firstInput"><span id="result1">Unchanged Text</span><br>
+            Input 2: <input type="text" id="secondInput"><span id="result2">Unchanged Text</span><br>
+            Input 3: <input type="text" id="thirdInput"><span id="result3">Unchanged Text</span><br>
+            <input type=button value="Update" onclick="buttonClicked()">
+        </div>
+        
+        <script src="logic.js"></script>
+    </body>
+<html>
